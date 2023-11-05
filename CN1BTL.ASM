@@ -81,8 +81,7 @@ PUBLIC @COPYTEP$qv
         int 21h
         jnc KT
         HienString err_C
-     KT:
-        HienString success
+     KT: 
         HienString tieptuc
         mov ah,1
         int 21h
