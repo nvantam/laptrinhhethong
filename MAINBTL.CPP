@@ -5,8 +5,8 @@
 #include<stdlib.h>
 //bien cho cn1
 extern COPYTEP();
+
 //bien cho cn2
-int n,d,u1;
 extern TONGCSC();
 
 //bien cho cn3
@@ -28,9 +28,8 @@ void main() {
     cout << "\n\n\n\t     Co tiep tuc CT (c/k)?";                                                                                                                                                                               
     t1=getch();
     if(t1=='c'){
-    L1:
     do{
-	clrscr();	
+        clrscr(); 
         cout<<"\n\t     CAC CHUONG TRINH COPY TEP, CONG CAP SO CONG, O MEM       ";
         cout<<"\n\t     ------------------------o0o-----------------------       ";
         cout<<"\n\n\t      1. Chuc Nang Copy Tep                                 ";
@@ -40,43 +39,14 @@ void main() {
         cout<<"\n\n\t      Moi ban nhap lua chon:"; cin>> chon;
         switch(chon){
             case 1:{
-                clrscr();
-                cout<<"\n\t\t\t      Chuc Nang Copy Tep ";
-                cout<<"\n\t\t\t      ------------------ ";
                 cout<<COPYTEP();
                 break;
             }
             case 2:{
-            L3:
-                clrscr();
-                cout<<"\n\t\t        CHUC NANG TINH TONG CAP SO CONG ";
-                cout<<"\n\t\t        ------------------------------- ";
-               /* do{
-                    cout<<"\n\t     Vao so n:"; cin>>n;
-                    if(n<=1){
-                        cout<<"\n\t     Vao lai so n:"; cin>>n;
-                    }
-                    if(cin.fail()){
-                        cin.clear();
-                        cin.ignore(32767, '\n');
-                    }                   
-                }while(n<0); */
-                cout<<"\n\t      Vao so n:"; cin>>n;
-                cout<<"\t      Vao so d:";cin>>d;
-                cout<<"\t      Vao so u1:"; cin>>u1;
-                cout<<"\t      Tong cap so cong la: ";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
                 cout<<TONGCSC();
-                cout<<"\t\n      Co tiep tcu CT (c/k)? ";
-                char tl = getch();
-                if(tl=='c'){
-                      goto L3;
-                }
                 break;
             }
             case 3:{
-                clrscr();
-                cout<<"\n\t\t            Chuc Nang Kiem Tra O Mem ";
-                cout<<"\n\t\t            -------------------------"; 
                 cout<<KIEMTRAOMEM();
                 break;
             }

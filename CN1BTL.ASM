@@ -2,7 +2,9 @@ include lib1.asm  ;xac lap 2 marco xoa man hinh, hien sring
 .model small
 .stack 100h
 .data
-m1 db 13,10,'              Vao ten tep can copy:$'
+m1 db 13,10,'                     Chuc Nang Copy Tep ';
+   db 13,10,'                     --------o0o-------';
+   db 13,10,13,10,'              Vao ten tep can copy:$'
 m2 db 13,10,'              Vao ten tep can copy den:$'
 err_O db 13,10,'              khong mo duoc tep!$'
 err_R db 13,10,'              khong doc duoc tep!$'
@@ -22,6 +24,7 @@ PUBLIC @COPYTEP$qv
         mov ax,@data
         mov ds,ax
       L0:
+        clrscr
         HienString m1
         lea dx, buff
         call GET_FILE_NAME
@@ -45,7 +48,7 @@ PUBLIC @COPYTEP$qv
         HienString err_O
         jmp DONGTEPS
       L2:
-        mov thetepd,ax        ;cat tep vao thetepd
+         mov thetepd,ax        ;cat tep vao thetepd
       L3:                     ;copy 512 byte den vung dem
         mov bx,theteps
         mov cx,512            ;so byte
